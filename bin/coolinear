@@ -1,0 +1,6 @@
+#!/bin/bash
+
+RC_FILE=coolinear.conf
+source ${RC_FILE}
+bash --noprofile --rcfile ${RC_FILE}
+bash -i -c "export HISTFILE=${HISTFILE}; history -r; history"
