@@ -3,4 +3,6 @@
 RC_FILE=coolinear.conf
 source ${RC_FILE}
 bash --noprofile --rcfile ${RC_FILE}
-bash -i -c "export HISTFILE=${HISTFILE}; history -r; history"
+# Create COOLINEAR_DIR if it doesn't exist
+[ -d ${COOLINEAR_DIR} ] || mkdir ${COOLINEAR_DIR} && chmod 700 ${COOLINEAR_DIR}
+
