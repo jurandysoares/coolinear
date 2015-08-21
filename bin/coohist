@@ -1,0 +1,3 @@
+source /etc/coolinear/coolinear.conf
+[-d ${COOLINEAR_DIR} ] && ls 
+bash -i -c "export HISTFILE=${HISTFILE}; history -r; history"
