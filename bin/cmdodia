@@ -1,0 +1,7 @@
+#!/bin/bash 
+hoje=$(date +'%F')
+diretorio=${HOME}/Comandos
+arquivo=${diretorio}/${hoje}-${USER}.txt
+
+[ -d ${diretorio} ] || mkdir ${diretorio}
+history | grep ${hoje} > ${arquivo}
